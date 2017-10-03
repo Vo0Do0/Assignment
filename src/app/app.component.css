@@ -1,0 +1,50 @@
+.carousel-inner {
+    width: 100%;
+    max-height: 100vh !important;
+}
+
+.image-box {
+    position: relative;
+    width: 100%;
+    /* for IE 6 */
+}
+
+.grid-element {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+}
+
+h6 {
+    position: absolute;
+    top: 80%;
+    left: 10;
+    width: 100%;
+    padding: 10px
+}
+
+h6 span {
+    color: white;
+    font: bold 18px Helvetica, Sans-Serif;
+    letter-spacing: -1px;
+    background: rgb(0, 0, 0);
+    /* fallback color */
+    background: rgba(0, 0, 0, 0.0);
+    /* padding: 10px;  */
+}
+
+.thumbnail-image {
+    max-height: 30vh;
+    width: auto;
+}
+
+.thumbnail-image-box {
+    text-align: center;
+}
+
+.right-list-element {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid black
+}
+
+.right-list-container {}

@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{title}}!
   </h1>
@@ -16,5 +16,62 @@
   <li>
     <h2><a target="_blank" href="https://blog.angular.io//">Angular blog</a></h2>
   </li>
-</ul>
+</ul> -->
+<div class="container">
+    <h2>Carousel Example</h2>
+    <div class="row">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
 
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item" *ngFor="let item of dataSet; let index = index" [class.active]="index == 0">
+                    <img src="{{item.image}}" alt="" style="width:100%;">
+                    <div class="carousel-caption">
+                        <h3>{{item.title}}</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-4 grid-element" *ngFor="let item of dataSet">
+                    <div class="thumbnail image-box">
+                        <img src="{{item.image}}" alt="Lights" style="width:100%">
+                        <!-- <div class="caption">
+                    <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+                </div> -->
+                        <h6><span>{{item.title}}</span></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 right-list-container">
+            <div class="row right-list-element" *ngFor="let item of dataSet">
+                <div class="col-md-3 grid-element thumbnail-image-box">
+                    <img src="{{item.image}}" alt="Lights" class="thumbnail-image">
+                </div>
+                <div class="col-md-9 grid-element">
+                    <label>{{item.title}}</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
